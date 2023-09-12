@@ -5,16 +5,21 @@ import Advisor from '../assets/advisor.png';
 import Tiket from '../assets/tiket.png';
 import Airbnb from '../assets/airbnb.png';
 import Tour from '../assets/tour.png';
+import Garage from '../assets/icons/garage 1.svg';
+import Bath from '../assets/icons/bath.svg';
+import Bed from '../assets/icons/bed.svg';
+import Stairs from '../assets/icons/stairs.svg';
 import CheckboxButton from '../components/elements/CheckboxButton';
 import Container from '../components/elements/Container';
 import { house } from '../data/featuredHouse';
 import SmallCard from '../components/elements/SmallCard';
 import ListSkeletonSmallCard from '../components/fragments/ListSkeletonSmallCard';
+import IconsSvg from '../components/elements/IconsSvg';
 
 const HomePage = () => {
   const [data, setData] = React.useState(house);
-  const [filter, setFilter] = React.useState('House');
-  const [loadings, setLoading] = React.useState(true);
+  const [filter, setFilter] = React.useState<string>('House');
+  const [loadings, setLoading] = React.useState<boolean>(true);
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     setFilter((prevState) => e.target.value);
@@ -97,7 +102,7 @@ const HomePage = () => {
         )}
       </Container>
       <Container>
-        <div className='flex gap-4'>
+        <div className='flex gap-4 flex-col-reverse lg:flex-row'>
           <div className='flex flex-col gap-4 flex-1'>
             <p className='text-[#F59E0B] text-sm font-medium'>Ready to Sell!</p>
             <h1 className='text-3xl font-medium'>Let’s tour and see our house!</h1>
@@ -105,27 +110,30 @@ const HomePage = () => {
             <p>House Detail</p>
             <div className='grid grid-cols-2 gap-2'>
               <div className='flex items-center gap-2'>
-                <p>b</p>
+                <IconsSvg src={Bed} alt='icons' size={32} />
                 <p>4 Bedrooms</p>
               </div>
               <div className='flex items-center  gap-2'>
-                <p>b</p>
+                <IconsSvg src={Bath} alt='icons' size={32} />
                 <p>2 Bathrooms</p>
               </div>
               <div className='flex items-center  gap-2'>
-                <p>b</p>
+                <IconsSvg src={Garage} alt='icons' size={32} />
                 <p>1 Carport</p>
               </div>
               <div className='flex items-center  gap-2'>
-                <p>b</p>
+                <IconsSvg src={Stairs} alt='icons' size={32} />
                 <p>2 Floors</p>
               </div>
             </div>
           </div>
           <div className='flex-1 h-auto'>
-            <img src={Tour} alt={'tour.png'} className='w-full object-cover object-center h-auto ' />
+            <img src={Tour} alt={'tour.png'} className='max-w-full object-cover object-center h-auto ' />
           </div>
         </div>
+      </Container>
+      <Container>
+        <h1></h1>
       </Container>
     </main>
   );

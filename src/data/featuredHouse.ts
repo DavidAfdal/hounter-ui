@@ -3,23 +3,10 @@ import House1 from '../assets/house1.jpeg';
 import House2 from '../assets/house2.jpeg';
 import House3 from '../assets/house3.jpeg';
 import House4 from '../assets/house4.jpeg';
+import HouseModel from '../models/House';
+import SellerModel from '../models/Seller';
 
-type House = {
-  id?: number;
-  nameHouse: string;
-  houseImg: string;
-  price: string;
-  type: string;
-};
-
-type Seller = {
-  sellerId?: string;
-  imgSeller: string;
-  nameSeller: string;
-  jobSeller: string;
-};
-
-type FeaturedHouse = House & Omit<Seller, 'id'>;
+type FeaturedHouse = HouseModel & Omit<SellerModel, 'id'>;
 
 export const house: FeaturedHouse[] = [
   {

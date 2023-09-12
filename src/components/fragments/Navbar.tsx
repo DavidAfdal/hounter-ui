@@ -1,4 +1,3 @@
-import { Link } from 'react-router-dom';
 import Logo from '../../assets/logo.svg';
 
 const Navbar = () => {
@@ -14,7 +13,7 @@ const Navbar = () => {
             {['About Us', 'Article', 'Property'].map((nav, i) => {
               return (
                 <li key={i} className='rounded-[32px] text-white border border-solid bg-nav-bg px-4 py-2 hover:bg-secondary-100 hover:text-secondary-700 hover:border-secondary-700'>
-                  <Link to='/'>{nav}</Link>
+                  <a href={`#${nav}`}>{nav}</a>
                 </li>
               );
             })}
