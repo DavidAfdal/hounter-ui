@@ -1,15 +1,15 @@
 import React from 'react';
-import Home from '../../assets/home.png';
-import Traveloka from '../../assets/traveloka.png';
-import Advisor from '../../assets/advisor.png';
-import Tiket from '../../assets/tiket.png';
-import Airbnb from '../../assets/airbnb.png';
-import Tour from '../../assets/tour.png';
-import CheckboxButton from '../../shared/components/uiElement/CheckboxButton';
-import Container from '../../shared/components/uiElement/Container';
-import { house } from '../../shared/data/featuredHouse';
-import SmallCard from '../../shared/components/uiElement/SmallCard';
-import ListSkeletonSmallCard from '../components/ListSkeletonSmallCard';
+import Home from '../assets/home.png';
+import Traveloka from '../assets/traveloka.png';
+import Advisor from '../assets/advisor.png';
+import Tiket from '../assets/tiket.png';
+import Airbnb from '../assets/airbnb.png';
+import Tour from '../assets/tour.png';
+import CheckboxButton from '../components/elements/CheckboxButton';
+import Container from '../components/elements/Container';
+import { house } from '../data/featuredHouse';
+import SmallCard from '../components/elements/SmallCard';
+import ListSkeletonSmallCard from '../components/fragments/ListSkeletonSmallCard';
 
 const HomePage = () => {
   const [data, setData] = React.useState(house);

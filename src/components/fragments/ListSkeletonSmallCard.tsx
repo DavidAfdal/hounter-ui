@@ -1,5 +1,5 @@
-import React from 'react';
-import SkeletonSmallCard from '../../shared/components/uiElement/SkeletonSmallCard';
+
+import SkeletonSmallCard from '../elements/SkeletonSmallCard';
 
 const ListSkeletonSmallCard = () => {
   return (

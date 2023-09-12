@@ -1,8 +1,8 @@
-import Home from '../../assets/home.png';
-import House1 from '../../assets/house1.jpeg';
-import House2 from '../../assets/house2.jpeg';
-import House3 from '../../assets/house3.jpeg';
-import House4 from '../../assets/house4.jpeg';
+import Home from '../assets/home.png';
+import House1 from '../assets/house1.jpeg';
+import House2 from '../assets/house2.jpeg';
+import House3 from '../assets/house3.jpeg';
+import House4 from '../assets/house4.jpeg';
 
 type House = {
   id?: number;
